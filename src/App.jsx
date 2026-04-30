@@ -34,7 +34,7 @@ function App() {
 
       <Products productsPromise = {productsPromise} activeTab = {activeTab} setActiveTab = {setActiveTab} carts = {carts} setCarts = {setCarts}/>
 
-      <Cart activeTab = {activeTab} carts = {carts}/>
+      <Cart activeTab = {activeTab} carts = {carts} setCarts = {setCarts}/>
 
       <Choose/>
 
