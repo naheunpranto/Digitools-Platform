@@ -2,6 +2,7 @@
 import './App.css'
 import Banner from './components/Banner/Banner'
 import Choose from './components/Choose/Choose'
+import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
 import Pricing from './components/Pricing/Pricing'
 import Products from './components/Products/Products'
@@ -32,6 +33,8 @@ function App() {
       <Pricing/>
 
       <Workflow/>
+
+      <Footer />
     </>
   )
 }
