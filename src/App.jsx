@@ -1,6 +1,7 @@
 
 import './App.css'
 import Banner from './components/Banner/Banner'
+import Choose from './components/Choose/Choose'
 import Navbar from './components/Navbar/Navbar'
 import Products from './components/Products/Products'
 import Stats from './components/Stats/Stats'
@@ -23,6 +24,8 @@ function App() {
       <Stats/>
 
       <Products productsPromise = {productsPromise}/>
+
+      <Choose/>
     </>
   )
 }
