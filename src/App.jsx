@@ -3,8 +3,10 @@ import './App.css'
 import Banner from './components/Banner/Banner'
 import Choose from './components/Choose/Choose'
 import Navbar from './components/Navbar/Navbar'
+import Pricing from './components/Pricing/Pricing'
 import Products from './components/Products/Products'
 import Stats from './components/Stats/Stats'
+import Workflow from './components/Workflow/Workflow'
 
 const productsData = async () => {
   const res = await fetch("/productData.json")
@@ -26,6 +28,10 @@ function App() {
       <Products productsPromise = {productsPromise}/>
 
       <Choose/>
+
+      <Pricing/>
+
+      <Workflow/>
     </>
   )
 }

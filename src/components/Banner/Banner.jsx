@@ -3,7 +3,7 @@ import BannerImage from "../../assets/banner.png"
 
 const Banner = () => {
     return (
-        <div className="flex flex-col lg:flex-row justify-between items-center container mx-auto mt-10 lg:mt-[85px] gap-10 lg:gap-[60px] mb-20 px-4 lg:px-0">
+        <div className="flex flex-col lg:flex-row justify-between items-center container mx-auto mt-10 lg:mt-21.25 gap-10 lg:gap-15 mb-20 px-4 lg:px-0">
             {/* Left side section */}
             <div className="space-y-4 flex flex-col items-center lg:items-start text-center lg:text-left">
                 <div className="flex gap-2 bg-[#e1e7ffFF] w-[320px] rounded-3xl p-3">
