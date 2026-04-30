@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 
 
 const Cart = ({activeTab, carts, setCarts}) => {
@@ -8,11 +9,13 @@ const Cart = ({activeTab, carts, setCarts}) => {
 
     const handlePayment = () => {
         setCarts([])
+        toast.success("Payment successful!")
     }
 
     const handleRemove = (item) => {
         const filteredArray = carts.filter(c => c.id !== item.id)
         setCarts(filteredArray)
+        toast.success("Item Remove")
     }
 
     return (

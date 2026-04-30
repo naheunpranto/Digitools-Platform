@@ -1,6 +1,6 @@
 import { IoCartOutline } from "react-icons/io5";
 
-const Navbar = () => {
+const Navbar = ({carts}) => {
   return (
     <div className="shadow-sm">
       <div className="navbar bg-base-100 container mx-auto">
@@ -68,7 +68,11 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end flex gap-5">
-          <IoCartOutline />
+          <div className="relative inline-block cursor-pointer">
+            <IoCartOutline className="w-6 h-6" />
+            <span className="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-white">{carts.length}</span>
+          </div>
+
           <span className="font-bold hidden sm:block">Login</span>
           <a className="btn bg-[#4F39F6] text-white font-bold text-[16px] rounded-3xl">
             Button

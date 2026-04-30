@@ -1,5 +1,5 @@
 
-import { act, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import Banner from './components/Banner/Banner'
 import Cart from './components/Cart/Cart'
@@ -26,7 +26,7 @@ function App() {
 
   return (
     < >
-      <Navbar />
+      <Navbar carts = {carts}/>
 
       <Banner/>
 
