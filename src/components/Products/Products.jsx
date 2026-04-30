@@ -1,8 +1,10 @@
 import { use } from "react";
 import Product from "./Product";
 
-const Products = ({ productsPromise }) => {
+const Products = ({ productsPromise, activeTab, setActiveTab, carts, setCarts }) => {
   const products = use(productsPromise);
+
+  
 
   return (
     <div className="text-center space-y-4">
@@ -19,6 +21,7 @@ const Products = ({ productsPromise }) => {
           name="my_tabs_1"
           className="tab rounded-full w-40"
           aria-label="Products"
+          onClick={() => setActiveTab("products")}
           defaultChecked
         />
 
@@ -27,16 +30,15 @@ const Products = ({ productsPromise }) => {
           name="my_tabs_1"
           className="tab rounded-full w-40"
           aria-label="Cart"
+          onClick={() => setActiveTab("cart")}
         />
       </div>
 
-      <div className="grid grid-cols md:grid-cols-2 lg:grid-cols-3 container mx-auto gap-4">
+      {activeTab === "products" && <div className="grid grid-cols md:grid-cols-2 lg:grid-cols-3 container mx-auto gap-4">
         {
-            products.map(product => {
-                return <Product product = {product}/>
-            })
+            products.map(product => {return <Product product = {product} carts = {carts} setCarts = {setCarts}/>})
         }
-      </div>
+      </div>}
     </div>
   );
 };
